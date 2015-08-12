@@ -3,9 +3,10 @@
     {
         function playRockPaperScissors($user,$system)
         {
+            $output = array();
 
             if( ($user == $system) ) {
-                return "Same thing picked!";
+                array_push($output,"Same thing picked!");
             }
 
             if ( (($user == "rock")     && ($system == "scissors")) ||
@@ -13,9 +14,11 @@
                  (($user == "paper")    && ($system == "rock"))         )
 
             {
-                return "You win!";
+                array_push($output,"You win!");
 
-            } else { return "You Lose!"; }
+            } else { array_push($output,"You Lose!"); }
+
+            return $output;
 
         }
 
