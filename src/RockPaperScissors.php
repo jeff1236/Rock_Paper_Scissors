@@ -5,6 +5,7 @@
         {
 
             $output = array();
+            array_push($output, $user);
 
             if( $system == "computer_pick") {
 
@@ -29,7 +30,7 @@
             array_push($output, $system_pick);
 
             if( ($user == $system_pick) ) {
-                array_push($output,"Same thing picked!");
+                array_push($output,"No Winner! Same thing picked!");
             }
 
 

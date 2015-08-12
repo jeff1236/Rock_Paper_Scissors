@@ -33,13 +33,14 @@
 
         $results = $my_RockPaperScissors->playRockPaperScissors($_GET['user_input'], $_GET['system_input']);
 
-        $pick = $results[0];
-        $result = $results[1];
+        $user1 = $results[0];
+        $user2 = $results[1];
+        $result = $results[2];
 
         // echo $pick;
         // echo $result;
 
-        return $app['twig']->render('results.html.twig', array('pick' => $pick, 'result' => $result));
+        return $app['twig']->render('results.html.twig', array('user1' => $user1, 'user2' => $user2,'result' => $result));
     });
 
     return $app;
