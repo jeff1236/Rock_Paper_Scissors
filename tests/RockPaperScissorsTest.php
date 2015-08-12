@@ -89,6 +89,20 @@
 					//Assert
 					$this->assertEquals("You win!", $result);
 			}
+
+			function test_paper_scissors()
+			{
+					//Arrange
+					$test_RockPaperScissors = new RockPaperScissors;
+					$user = "paper";
+					$system = "scissors";
+
+					//Act
+					$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
+
+					//Assert
+					$this->assertEquals("You Lose!", $result);
+			}
 		}
 
 ?>
