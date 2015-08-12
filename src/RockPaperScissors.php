@@ -3,7 +3,10 @@
     {
         function playRockPaperScissors($user,$system)
         {
-            $output = "";
+
+            if( ($user == $system) ) {
+                return "Same thing picked!";
+            }
 
             if ( ($user == "rock") && ($system == "scissors") ) {
 

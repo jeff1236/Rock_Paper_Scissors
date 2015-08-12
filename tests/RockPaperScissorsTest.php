@@ -18,6 +18,22 @@
 						//Assert
 						$this->assertEquals("You win!", $result);
 				}
+
+				function test_same_pick()
+				{
+						//Arrange
+						$test_RockPaperScissors = new RockPaperScissors;
+						$user = "rock";
+						$system = "rock";
+
+						//Act
+						$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
+
+						//Assert
+						$this->assertEquals("Same thing picked!", $result);
+				}
+
+
 		}
 
 ?>
