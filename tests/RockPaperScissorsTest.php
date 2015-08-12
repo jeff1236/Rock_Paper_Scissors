@@ -5,34 +5,48 @@
 		class RockPaperScissorsTest extends PHPUnit_Framework_TestCase
 		{
 
-				function test_rock_scissors()
-				{
-						//Arrange
-						$test_RockPaperScissors = new RockPaperScissors;
-						$user = "rock";
-						$system = "scissors";
+			function test_same_pick()
+			{
+					//Arrange
+					$test_RockPaperScissors = new RockPaperScissors;
+					$user = "rock";
+					$system = "rock";
 
-						//Act
-						$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
+					//Act
+					$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
 
-						//Assert
-						$this->assertEquals("You win!", $result);
-				}
+					//Assert
+					$this->assertEquals("Same thing picked!", $result);
+			}
 
-				function test_same_pick()
-				{
-						//Arrange
-						$test_RockPaperScissors = new RockPaperScissors;
-						$user = "rock";
-						$system = "rock";
+			function test_rock_scissors()
+			{
+					//Arrange
+					$test_RockPaperScissors = new RockPaperScissors;
+					$user = "rock";
+					$system = "scissors";
 
-						//Act
-						$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
+					//Act
+					$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
 
-						//Assert
-						$this->assertEquals("Same thing picked!", $result);
-				}
+					//Assert
+					$this->assertEquals("You win!", $result);
+			}
 
+
+			function test_rock_paper()
+			{
+					//Arrange
+					$test_RockPaperScissors = new RockPaperScissors;
+					$user = "rock";
+					$system = "paper";
+
+					//Act
+					$result = $test_RockPaperScissors->playRockPaperScissors($user, $system);
+
+					//Assert
+					$this->assertEquals("You Lose!", $result);
+			}
 
 		}
 

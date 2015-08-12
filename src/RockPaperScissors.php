@@ -8,14 +8,15 @@
                 return "Same thing picked!";
             }
 
-            if ( ($user == "rock") && ($system == "scissors") ) {
+            if ( (($user == "rock")     && ($system == "scissors")) ||
+                 (($user == "scissors") && ($system == "paper")) ||
+                 (($user == "paper")    && ($system == "rock"))         )
 
-                $output = "You win!";
+            {
+                return "You win!";
 
-            } else { $output = "You Lose!"; }
+            } else { return "You Lose!"; }
 
-
-            return $output;
         }
 
     }
