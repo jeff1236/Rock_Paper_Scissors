@@ -33,7 +33,13 @@
 
         $results = $my_RockPaperScissors->playRockPaperScissors($_GET['user_input'], $_GET['system_input']);
 
-        return $app['twig']->render('results.html.twig', $results);
+        $pick = $results[0];
+        $result = $results[1];
+
+        // echo $pick;
+        // echo $result;
+
+        return $app['twig']->render('results.html.twig', array('pick' => $pick, 'result' => $result));
     });
 
     return $app;
